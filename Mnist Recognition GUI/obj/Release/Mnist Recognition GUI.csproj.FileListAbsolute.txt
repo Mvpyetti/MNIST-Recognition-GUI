@@ -1,0 +1,12 @@
+C:\Users\Tommy\Documents\GitHub\Mnist Recognition GUI\Mnist Recognition GUI\bin\Release\Mnist Recognition GUI.exe.config
+C:\Users\Tommy\Documents\GitHub\Mnist Recognition GUI\Mnist Recognition GUI\bin\Release\Mnist Recognition GUI.exe
+C:\Users\Tommy\Documents\GitHub\Mnist Recognition GUI\Mnist Recognition GUI\bin\Release\Mnist Recognition GUI.pdb
+C:\Users\Tommy\Documents\GitHub\Mnist Recognition GUI\Mnist Recognition GUI\bin\Release\MnistWrapper.dll
+C:\Users\Tommy\Documents\GitHub\Mnist Recognition GUI\Mnist Recognition GUI\bin\Release\MnistWrapper.pdb
+C:\Users\Tommy\Documents\GitHub\Mnist Recognition GUI\Mnist Recognition GUI\obj\Release\Mnist_Recognition_GUI.MnistMain.resources
+C:\Users\Tommy\Documents\GitHub\Mnist Recognition GUI\Mnist Recognition GUI\obj\Release\Mnist_Recognition_GUI.LoadingScreen.resources
+C:\Users\Tommy\Documents\GitHub\Mnist Recognition GUI\Mnist Recognition GUI\obj\Release\Mnist_Recognition_GUI.Properties.Resources.resources
+C:\Users\Tommy\Documents\GitHub\Mnist Recognition GUI\Mnist Recognition GUI\obj\Release\Mnist Recognition GUI.csproj.GenerateResource.Cache
+C:\Users\Tommy\Documents\GitHub\Mnist Recognition GUI\Mnist Recognition GUI\obj\Release\Mnist Recognition GUI.csproj.CoreCompileInputs.cache
+C:\Users\Tommy\Documents\GitHub\Mnist Recognition GUI\Mnist Recognition GUI\obj\Release\Mnist Recognition GUI.exe
+C:\Users\Tommy\Documents\GitHub\Mnist Recognition GUI\Mnist Recognition GUI\obj\Release\Mnist Recognition GUI.pdb
