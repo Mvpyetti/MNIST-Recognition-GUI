@@ -42,6 +42,9 @@
             this.txtMiniBatch = new System.Windows.Forms.TextBox();
             this.txtEta = new System.Windows.Forms.TextBox();
             this.WaitingLabel = new System.Windows.Forms.Label();
+            this.BtnNext = new System.Windows.Forms.Button();
+            this.lblExpected = new System.Windows.Forms.Label();
+            this.lblExpectedVal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MNISTImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +52,7 @@
             // 
             this.MNISTImage.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.MNISTImage.Location = new System.Drawing.Point(330, 23);
-            this.MNISTImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MNISTImage.Margin = new System.Windows.Forms.Padding(2);
             this.MNISTImage.MaximumSize = new System.Drawing.Size(315, 341);
             this.MNISTImage.Name = "MNISTImage";
             this.MNISTImage.Size = new System.Drawing.Size(315, 341);
@@ -60,7 +63,7 @@
             // 
             this.BtnTestNeuralNetwork.Enabled = false;
             this.BtnTestNeuralNetwork.Location = new System.Drawing.Point(34, 304);
-            this.BtnTestNeuralNetwork.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnTestNeuralNetwork.Margin = new System.Windows.Forms.Padding(2);
             this.BtnTestNeuralNetwork.Name = "BtnTestNeuralNetwork";
             this.BtnTestNeuralNetwork.Size = new System.Drawing.Size(259, 63);
             this.BtnTestNeuralNetwork.TabIndex = 1;
@@ -71,7 +74,7 @@
             // BtnTrainNN
             // 
             this.BtnTrainNN.Location = new System.Drawing.Point(37, 219);
-            this.BtnTrainNN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnTrainNN.Margin = new System.Windows.Forms.Padding(2);
             this.BtnTrainNN.Name = "BtnTrainNN";
             this.BtnTrainNN.Size = new System.Drawing.Size(256, 63);
             this.BtnTrainNN.TabIndex = 3;
@@ -82,7 +85,7 @@
             // txtEpoch
             // 
             this.txtEpoch.Location = new System.Drawing.Point(34, 41);
-            this.txtEpoch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEpoch.Margin = new System.Windows.Forms.Padding(2);
             this.txtEpoch.Name = "txtEpoch";
             this.txtEpoch.Size = new System.Drawing.Size(94, 20);
             this.txtEpoch.TabIndex = 4;
@@ -121,7 +124,7 @@
             // txtNeuronCnt
             // 
             this.txtNeuronCnt.Location = new System.Drawing.Point(34, 158);
-            this.txtNeuronCnt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNeuronCnt.Margin = new System.Windows.Forms.Padding(2);
             this.txtNeuronCnt.Name = "txtNeuronCnt";
             this.txtNeuronCnt.Size = new System.Drawing.Size(94, 20);
             this.txtNeuronCnt.TabIndex = 9;
@@ -157,7 +160,7 @@
             "DOUBLE SIG",
             "ReLU"});
             this.txtActFunc.Location = new System.Drawing.Point(37, 98);
-            this.txtActFunc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtActFunc.Margin = new System.Windows.Forms.Padding(2);
             this.txtActFunc.Name = "txtActFunc";
             this.txtActFunc.Size = new System.Drawing.Size(92, 21);
             this.txtActFunc.TabIndex = 14;
@@ -166,7 +169,7 @@
             // txtMiniBatch
             // 
             this.txtMiniBatch.Location = new System.Drawing.Point(188, 100);
-            this.txtMiniBatch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMiniBatch.Margin = new System.Windows.Forms.Padding(2);
             this.txtMiniBatch.Name = "txtMiniBatch";
             this.txtMiniBatch.Size = new System.Drawing.Size(94, 20);
             this.txtMiniBatch.TabIndex = 15;
@@ -175,7 +178,7 @@
             // txtEta
             // 
             this.txtEta.Location = new System.Drawing.Point(188, 41);
-            this.txtEta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEta.Margin = new System.Windows.Forms.Padding(2);
             this.txtEta.Name = "txtEta";
             this.txtEta.Size = new System.Drawing.Size(94, 20);
             this.txtEta.TabIndex = 16;
@@ -190,12 +193,43 @@
             this.WaitingLabel.Size = new System.Drawing.Size(0, 13);
             this.WaitingLabel.TabIndex = 17;
             // 
+            // BtnNext
+            // 
+            this.BtnNext.Enabled = false;
+            this.BtnNext.Location = new System.Drawing.Point(555, 370);
+            this.BtnNext.Name = "BtnNext";
+            this.BtnNext.Size = new System.Drawing.Size(75, 23);
+            this.BtnNext.TabIndex = 18;
+            this.BtnNext.Text = "Next Image";
+            this.BtnNext.UseVisualStyleBackColor = true;
+            // 
+            // lblExpected
+            // 
+            this.lblExpected.AutoSize = true;
+            this.lblExpected.Location = new System.Drawing.Point(327, 370);
+            this.lblExpected.Name = "lblExpected";
+            this.lblExpected.Size = new System.Drawing.Size(85, 13);
+            this.lblExpected.TabIndex = 19;
+            this.lblExpected.Text = "Expected Value:";
+            // 
+            // lblExpectedVal
+            // 
+            this.lblExpectedVal.AutoSize = true;
+            this.lblExpectedVal.Location = new System.Drawing.Point(419, 370);
+            this.lblExpectedVal.Name = "lblExpectedVal";
+            this.lblExpectedVal.Size = new System.Drawing.Size(16, 13);
+            this.lblExpectedVal.TabIndex = 20;
+            this.lblExpectedVal.Text = "...";
+            // 
             // MnistMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(680, 405);
+            this.Controls.Add(this.lblExpectedVal);
+            this.Controls.Add(this.lblExpected);
+            this.Controls.Add(this.BtnNext);
             this.Controls.Add(this.WaitingLabel);
             this.Controls.Add(this.txtEta);
             this.Controls.Add(this.txtMiniBatch);
@@ -210,7 +244,7 @@
             this.Controls.Add(this.BtnTrainNN);
             this.Controls.Add(this.BtnTestNeuralNetwork);
             this.Controls.Add(this.MNISTImage);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MnistMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mnist Recognition";
@@ -237,6 +271,9 @@
         private System.Windows.Forms.TextBox txtMiniBatch;
         private System.Windows.Forms.TextBox txtEta;
         private System.Windows.Forms.Label WaitingLabel;
+        private System.Windows.Forms.Button BtnNext;
+        private System.Windows.Forms.Label lblExpected;
+        private System.Windows.Forms.Label lblExpectedVal;
     }
 }
 

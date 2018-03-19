@@ -105,6 +105,7 @@ namespace Mnist_Recognition_GUI
             string strTestingInFile = "t10k-images.idx3-ubyte";
             string strTestinglblFile = "t10k-labels.idx1-ubyte";
 
+            PrimeNeuralNetwork.ResetMNIST();
             PrimeNeuralNetwork.SetEpochCount(1);
             Task<bool> gettingImagesTask = new Task<bool>(() => { return PrimeNeuralNetwork.ReadImages(strTestingInFile); });
             Task<bool> gettingLabelsTask = new Task<bool>(() => { return PrimeNeuralNetwork.ReadLabels(strTestinglblFile); });
@@ -143,6 +144,7 @@ namespace Mnist_Recognition_GUI
 
             DisplayResults();
             EnableActions();
+            BtnNext.Enabled = true;
 
         }
 
@@ -189,6 +191,7 @@ namespace Mnist_Recognition_GUI
             txtEta.Enabled = false;
             txtActFunc.Enabled = false;
             txtEpoch.Enabled = false;
+
         }
 
         private void EnableActions()

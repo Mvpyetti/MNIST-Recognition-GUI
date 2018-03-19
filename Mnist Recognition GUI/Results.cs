@@ -22,7 +22,7 @@ namespace Mnist_Recognition_GUI
         {
             LblTotalImagesVal.Text = totalImages.ToString();
             lblCorrectImagesVal.Text = correctImages.ToString();
-            lblAccuracyVal.Text = accuracy.ToString();
+            lblAccuracyVal.Text = accuracy.ToString() + "%";
         }
 
         private void Results_Load(object sender, EventArgs e)

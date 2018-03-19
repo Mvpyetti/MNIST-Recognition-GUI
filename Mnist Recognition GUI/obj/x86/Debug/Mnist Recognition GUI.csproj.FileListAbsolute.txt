@@ -38,3 +38,4 @@ C:\Users\demoh_000\source\repos\Mnist-Recognition-GUI\Mnist Recognition GUI\obj\
 C:\Users\demoh_000\source\repos\Mnist-Recognition-GUI\Mnist Recognition GUI\obj\x86\Debug\Mnist Recognition GUI.csproj.CoreCompileInputs.cache
 C:\Users\demoh_000\source\repos\Mnist-Recognition-GUI\Mnist Recognition GUI\obj\x86\Debug\Mnist Recognition GUI.exe
 C:\Users\demoh_000\source\repos\Mnist-Recognition-GUI\Mnist Recognition GUI\obj\x86\Debug\Mnist Recognition GUI.pdb
+C:\Users\Tommy\Documents\GitHub\Mnist Recognition GUI\Mnist Recognition GUI\obj\x86\Debug\Mnist_Recognition_GUI.Results.resources
