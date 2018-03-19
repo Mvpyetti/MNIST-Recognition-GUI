@@ -18,11 +18,22 @@ namespace Mnist_Recognition_GUI
             InitializeComponent();
         }
 
-        public void AdjustLoadBar(int imagesRead, int totalImages, int epochIterator, int epochSize)
+        public void AdjustLoadBar(int imagesRead, int totalImages, int epochIterator, int epochSize, Mode currMode)
         {
-            TrainingLoadBar.Value = imagesRead * TrainingLoadBar.Maximum / totalImages;
-            LblLdEpochVal.Text = epochIterator.ToString();
-            LblldImageVal.Text = (imagesRead % epochSize).ToString();
+            LoadBar.Value = imagesRead * LoadBar.Maximum / totalImages;
+            if(currMode == Mode.TRAINING)
+            {
+                LblLdEpochVal.Text = epochIterator.ToString();
+                LblldImageVal.Text = (imagesRead % epochSize).ToString();
+            }
+            else
+            {
+                if (currMode == Mode.TESTING)
+                {
+                    lblEpochload.Text = " ";
+                    LblldImageVal.Text = imagesRead.ToString();
+                }
+            }
             LblldPercentage.Text = Math.Round((imagesRead / (double)totalImages * 100),2).ToString() + "%";
             Application.DoEvents();
         }

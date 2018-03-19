@@ -24,3 +24,17 @@ C:\Users\Tommy\Documents\GitHub\Mnist Recognition GUI\Mnist Recognition GUI\obj\
 C:\Users\Tommy\Documents\GitHub\Mnist Recognition GUI\Mnist Recognition GUI\obj\x86\Debug\Mnist Recognition GUI.csproj.CoreCompileInputs.cache
 C:\Users\Tommy\Documents\GitHub\Mnist Recognition GUI\Mnist Recognition GUI\obj\x86\Debug\Mnist Recognition GUI.exe
 C:\Users\Tommy\Documents\GitHub\Mnist Recognition GUI\Mnist Recognition GUI\obj\x86\Debug\Mnist Recognition GUI.pdb
+C:\Users\demoh_000\source\repos\Mnist-Recognition-GUI\Mnist Recognition GUI\bin\x86\Debug\Mnist Recognition GUI.exe.config
+C:\Users\demoh_000\source\repos\Mnist-Recognition-GUI\Mnist Recognition GUI\bin\x86\Debug\Mnist Recognition GUI.exe
+C:\Users\demoh_000\source\repos\Mnist-Recognition-GUI\Mnist Recognition GUI\bin\x86\Debug\Mnist Recognition GUI.pdb
+C:\Users\demoh_000\source\repos\Mnist-Recognition-GUI\Mnist Recognition GUI\bin\x86\Debug\MnistWrapper.dll
+C:\Users\demoh_000\source\repos\Mnist-Recognition-GUI\Mnist Recognition GUI\bin\x86\Debug\MnistWrapper.pdb
+C:\Users\demoh_000\source\repos\Mnist-Recognition-GUI\Mnist Recognition GUI\obj\x86\Debug\Mnist Recognition GUI.csprojResolveAssemblyReference.cache
+C:\Users\demoh_000\source\repos\Mnist-Recognition-GUI\Mnist Recognition GUI\obj\x86\Debug\Mnist_Recognition_GUI.MnistMain.resources
+C:\Users\demoh_000\source\repos\Mnist-Recognition-GUI\Mnist Recognition GUI\obj\x86\Debug\Mnist_Recognition_GUI.LoadingScreen.resources
+C:\Users\demoh_000\source\repos\Mnist-Recognition-GUI\Mnist Recognition GUI\obj\x86\Debug\Mnist_Recognition_GUI.Properties.Resources.resources
+C:\Users\demoh_000\source\repos\Mnist-Recognition-GUI\Mnist Recognition GUI\obj\x86\Debug\Mnist_Recognition_GUI.Results.resources
+C:\Users\demoh_000\source\repos\Mnist-Recognition-GUI\Mnist Recognition GUI\obj\x86\Debug\Mnist Recognition GUI.csproj.GenerateResource.Cache
+C:\Users\demoh_000\source\repos\Mnist-Recognition-GUI\Mnist Recognition GUI\obj\x86\Debug\Mnist Recognition GUI.csproj.CoreCompileInputs.cache
+C:\Users\demoh_000\source\repos\Mnist-Recognition-GUI\Mnist Recognition GUI\obj\x86\Debug\Mnist Recognition GUI.exe
+C:\Users\demoh_000\source\repos\Mnist-Recognition-GUI\Mnist Recognition GUI\obj\x86\Debug\Mnist Recognition GUI.pdb

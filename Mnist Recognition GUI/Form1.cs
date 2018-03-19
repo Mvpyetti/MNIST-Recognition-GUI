@@ -11,6 +11,11 @@ using System.Windows.Forms;
 
 namespace Mnist_Recognition_GUI
 {
+    public enum Mode
+    {
+        TRAINING,
+        TESTING
+    };
 
     public partial class MnistMain : Form
     {
@@ -36,15 +41,9 @@ namespace Mnist_Recognition_GUI
             int totalImages = 0;
             int epochSize = 0;
 
-            bool readImages = false;
-            bool readLabels = false;
-
             //These will be our hard-coded file names. We do this for now because program doesnt work with other files yet.
             string strTrainingInFile = "train-images.idx3-ubyte";
             string strTrainingLblFile = "train-labels.idx1-ubyte";
-            string strTestingInFile = "t10k-images.idx3-ubyte";
-            string strTestinglblFile = "t10k-labels.idx1-ubyte";
-            string strOutputFile = "TestResults.txt";
 
 
             //Obtain Hyper Parameters from GUI
@@ -70,8 +69,87 @@ namespace Mnist_Recognition_GUI
             Cursor.Current = Cursors.WaitCursor;
 
             DisableActions();
+            GenerateLoadingImgTxt(ref tempNeuralNetwork);
+
+            Cursor.Current = Cursors.Default;
+
+            epochSize = tempNeuralNetwork.GetEpochSize();
+            totalImages = tempNeuralNetwork.GetTotalImages();
+
+            Task trainingTask = new Task(() => { tempNeuralNetwork.TrainNetwork(); } );
+            trainingTask.Start();
+
+            //While the Network is training with read inputs and labels, display a loading screen 
+            LoadingScreen currLoadingScreen = new LoadingScreen();
+            currLoadingScreen.Show(this);
+
+            while (!(tempNeuralNetwork.FinishedTraining()))
+            {
+                currLoadingScreen.AdjustLoadBar(tempNeuralNetwork.GetImagesRead(), totalImages, tempNeuralNetwork.GetEpochIterator(), epochSize, Mode.TRAINING);
+            }
+            await trainingTask;
+            currLoadingScreen.Close();
+            EnableActions();
+            PrimeNeuralNetwork = tempNeuralNetwork;
+        }
+
+
+        private async void BtnTestNeuralNetwork_Click(object sender, EventArgs e)
+        {
+            //This function will only be called if a neural network has been trained.
+            //Now we want to train a set of images 
+            int totalImages = 0;
+            bool gotImages = false;
+            bool gotLabels = false;
+
+            string strTestingInFile = "t10k-images.idx3-ubyte";
+            string strTestinglblFile = "t10k-labels.idx1-ubyte";
+
+            PrimeNeuralNetwork.SetEpochCount(1);
+            Task<bool> gettingImagesTask = new Task<bool>(() => { return PrimeNeuralNetwork.ReadImages(strTestingInFile); });
+            Task<bool> gettingLabelsTask = new Task<bool>(() => { return PrimeNeuralNetwork.ReadLabels(strTestinglblFile); });
+            gettingImagesTask.Start();
+            gettingLabelsTask.Start();
+
+            Cursor.Current = Cursors.WaitCursor;
+
+            DisableActions();
+            
+            //NOTE: the following function will only end when Images and Labels are done being read
+            GenerateLoadingImgTxt(ref PrimeNeuralNetwork);
+
+            gotImages = await gettingImagesTask;
+            gotLabels = await gettingLabelsTask;
+
+            Cursor.Current = Cursors.Default;
+
+            totalImages = PrimeNeuralNetwork.GetTotalImages();
+
+            //Since the testing images and labels have been read, we can now begin testing
+            Task taskTestingNetwork = new Task(() => { PrimeNeuralNetwork.TestNetwork(); });
+            taskTestingNetwork.Start();
+
+            //Generate a testing loading bar screen
+            LoadingScreen currLoadingScreen = new LoadingScreen();
+            currLoadingScreen.Show(this);
+
+            while(!PrimeNeuralNetwork.FinishedTesting())
+            {
+                currLoadingScreen.AdjustLoadBar(PrimeNeuralNetwork.GetImagesRead(), totalImages, 0, totalImages, Mode.TESTING);
+            }
+
+            await taskTestingNetwork;
+            currLoadingScreen.Close();
+
+            DisplayResults();
+            EnableActions();
+
+        }
+
+        private void GenerateLoadingImgTxt(ref MnistWrapper.MnistWrapperClass currNetwork)
+        {
             int counter = 0;
-            while(!tempNeuralNetwork.FinishedReadingImages() || !tempNeuralNetwork.FinishedReadingLabels())
+            while (!currNetwork.FinishedReadingImages() || !currNetwork.FinishedReadingLabels())
             {
                 switch (counter)
                 {
@@ -91,34 +169,14 @@ namespace Mnist_Recognition_GUI
                 Application.DoEvents();
                 Thread.Sleep(1000);
             }
-            readLabels = await gettingLabelsTask;
-            readImages = await gettingImagesTask;
             WaitingLabel.Text = "";
-            Cursor.Current = Cursors.Default;
-
-            epochSize = tempNeuralNetwork.GetEpochSize();
-            totalImages = tempNeuralNetwork.GetTotalImages();
-
-            Task trainingTask = new Task(() => { tempNeuralNetwork.TrainNetwork(); } );
-            trainingTask.Start();
-
-            LoadingScreen currLoadingScreen = new LoadingScreen();
-            currLoadingScreen.Show(this);
-
-            while (!(tempNeuralNetwork.FinishedTraining()))
-            {
-                currLoadingScreen.AdjustLoadBar(tempNeuralNetwork.GetImagesRead(), totalImages, tempNeuralNetwork.GetEpochIterator(), epochSize);
-            }
-            currLoadingScreen.Close();
-            EnableActions();
-            PrimeNeuralNetwork = tempNeuralNetwork;
         }
 
-
-        private void BtnTestNeuralNetwork_Click(object sender, EventArgs e)
+        private void DisplayResults()
         {
-           //This function will only be called if a neural network has been trained.
-           //Now we want to train a set of images 
+            Results newResults = new Results();
+            newResults.ModifyResults(PrimeNeuralNetwork.GetTotalImages(), PrimeNeuralNetwork.GetCorrectImages(), PrimeNeuralNetwork.GetAccuracy());
+            newResults.Show(this);
         }
 
         private void DisableActions()
