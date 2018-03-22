@@ -51,21 +51,21 @@
             // MNISTImage
             // 
             this.MNISTImage.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.MNISTImage.Location = new System.Drawing.Point(330, 23);
-            this.MNISTImage.Margin = new System.Windows.Forms.Padding(2);
-            this.MNISTImage.MaximumSize = new System.Drawing.Size(315, 341);
+            this.MNISTImage.Location = new System.Drawing.Point(440, 28);
+            this.MNISTImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MNISTImage.MaximumSize = new System.Drawing.Size(420, 420);
             this.MNISTImage.Name = "MNISTImage";
-            this.MNISTImage.Size = new System.Drawing.Size(315, 341);
+            this.MNISTImage.Size = new System.Drawing.Size(420, 420);
             this.MNISTImage.TabIndex = 0;
             this.MNISTImage.TabStop = false;
             // 
             // BtnTestNeuralNetwork
             // 
             this.BtnTestNeuralNetwork.Enabled = false;
-            this.BtnTestNeuralNetwork.Location = new System.Drawing.Point(34, 304);
-            this.BtnTestNeuralNetwork.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnTestNeuralNetwork.Location = new System.Drawing.Point(45, 374);
+            this.BtnTestNeuralNetwork.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnTestNeuralNetwork.Name = "BtnTestNeuralNetwork";
-            this.BtnTestNeuralNetwork.Size = new System.Drawing.Size(259, 63);
+            this.BtnTestNeuralNetwork.Size = new System.Drawing.Size(345, 78);
             this.BtnTestNeuralNetwork.TabIndex = 1;
             this.BtnTestNeuralNetwork.Text = "Test Neural Network";
             this.BtnTestNeuralNetwork.UseVisualStyleBackColor = true;
@@ -73,10 +73,10 @@
             // 
             // BtnTrainNN
             // 
-            this.BtnTrainNN.Location = new System.Drawing.Point(37, 219);
-            this.BtnTrainNN.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnTrainNN.Location = new System.Drawing.Point(49, 270);
+            this.BtnTrainNN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnTrainNN.Name = "BtnTrainNN";
-            this.BtnTrainNN.Size = new System.Drawing.Size(256, 63);
+            this.BtnTrainNN.Size = new System.Drawing.Size(341, 78);
             this.BtnTrainNN.TabIndex = 3;
             this.BtnTrainNN.Text = "Train Neural Network";
             this.BtnTrainNN.UseVisualStyleBackColor = true;
@@ -84,69 +84,64 @@
             // 
             // txtEpoch
             // 
-            this.txtEpoch.Location = new System.Drawing.Point(34, 41);
-            this.txtEpoch.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEpoch.Location = new System.Drawing.Point(45, 50);
+            this.txtEpoch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEpoch.Name = "txtEpoch";
-            this.txtEpoch.Size = new System.Drawing.Size(94, 20);
+            this.txtEpoch.Size = new System.Drawing.Size(124, 22);
             this.txtEpoch.TabIndex = 4;
             this.txtEpoch.Text = "1";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 23);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(45, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.Size = new System.Drawing.Size(93, 17);
             this.label1.TabIndex = 5;
             this.label1.Text = "Epoch Count:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 72);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(45, 89);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 13);
+            this.label2.Size = new System.Drawing.Size(131, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "Activation Function:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 131);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(45, 161);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 13);
+            this.label3.Size = new System.Drawing.Size(96, 17);
             this.label3.TabIndex = 8;
             this.label3.Text = "Neuron Count";
             // 
             // txtNeuronCnt
             // 
-            this.txtNeuronCnt.Location = new System.Drawing.Point(34, 158);
-            this.txtNeuronCnt.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNeuronCnt.Location = new System.Drawing.Point(45, 194);
+            this.txtNeuronCnt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNeuronCnt.Name = "txtNeuronCnt";
-            this.txtNeuronCnt.Size = new System.Drawing.Size(94, 20);
+            this.txtNeuronCnt.Size = new System.Drawing.Size(124, 22);
             this.txtNeuronCnt.TabIndex = 9;
             this.txtNeuronCnt.Text = "30";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(185, 72);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(247, 89);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 13);
+            this.label5.Size = new System.Drawing.Size(114, 17);
             this.label5.TabIndex = 12;
             this.label5.Text = "MiniBatch Count:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(185, 23);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(247, 28);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(26, 13);
+            this.label6.Size = new System.Drawing.Size(33, 17);
             this.label6.TabIndex = 11;
             this.label6.Text = "Eta:";
             // 
@@ -159,74 +154,77 @@
             "SIGMOID",
             "DOUBLE SIG",
             "ReLU"});
-            this.txtActFunc.Location = new System.Drawing.Point(37, 98);
-            this.txtActFunc.Margin = new System.Windows.Forms.Padding(2);
+            this.txtActFunc.Location = new System.Drawing.Point(49, 121);
+            this.txtActFunc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtActFunc.Name = "txtActFunc";
-            this.txtActFunc.Size = new System.Drawing.Size(92, 21);
+            this.txtActFunc.Size = new System.Drawing.Size(121, 24);
             this.txtActFunc.TabIndex = 14;
             this.txtActFunc.Text = "TANH";
             // 
             // txtMiniBatch
             // 
-            this.txtMiniBatch.Location = new System.Drawing.Point(188, 100);
-            this.txtMiniBatch.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMiniBatch.Location = new System.Drawing.Point(251, 123);
+            this.txtMiniBatch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMiniBatch.Name = "txtMiniBatch";
-            this.txtMiniBatch.Size = new System.Drawing.Size(94, 20);
+            this.txtMiniBatch.Size = new System.Drawing.Size(124, 22);
             this.txtMiniBatch.TabIndex = 15;
             this.txtMiniBatch.Text = "1";
             // 
             // txtEta
             // 
-            this.txtEta.Location = new System.Drawing.Point(188, 41);
-            this.txtEta.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEta.Location = new System.Drawing.Point(251, 50);
+            this.txtEta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEta.Name = "txtEta";
-            this.txtEta.Size = new System.Drawing.Size(94, 20);
+            this.txtEta.Size = new System.Drawing.Size(124, 22);
             this.txtEta.TabIndex = 16;
             this.txtEta.Text = ".05";
             // 
             // WaitingLabel
             // 
             this.WaitingLabel.AutoSize = true;
-            this.WaitingLabel.Location = new System.Drawing.Point(34, 188);
-            this.WaitingLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.WaitingLabel.Location = new System.Drawing.Point(45, 231);
             this.WaitingLabel.Name = "WaitingLabel";
-            this.WaitingLabel.Size = new System.Drawing.Size(0, 13);
+            this.WaitingLabel.Size = new System.Drawing.Size(0, 17);
             this.WaitingLabel.TabIndex = 17;
             // 
             // BtnNext
             // 
             this.BtnNext.Enabled = false;
-            this.BtnNext.Location = new System.Drawing.Point(555, 370);
+            this.BtnNext.Location = new System.Drawing.Point(740, 455);
+            this.BtnNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnNext.Name = "BtnNext";
-            this.BtnNext.Size = new System.Drawing.Size(75, 23);
+            this.BtnNext.Size = new System.Drawing.Size(100, 28);
             this.BtnNext.TabIndex = 18;
             this.BtnNext.Text = "Next Image";
             this.BtnNext.UseVisualStyleBackColor = true;
+            this.BtnNext.Click += new System.EventHandler(this.BtnNext_Click);
             // 
             // lblExpected
             // 
             this.lblExpected.AutoSize = true;
-            this.lblExpected.Location = new System.Drawing.Point(327, 370);
+            this.lblExpected.Location = new System.Drawing.Point(436, 455);
+            this.lblExpected.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblExpected.Name = "lblExpected";
-            this.lblExpected.Size = new System.Drawing.Size(85, 13);
+            this.lblExpected.Size = new System.Drawing.Size(110, 17);
             this.lblExpected.TabIndex = 19;
             this.lblExpected.Text = "Expected Value:";
             // 
             // lblExpectedVal
             // 
             this.lblExpectedVal.AutoSize = true;
-            this.lblExpectedVal.Location = new System.Drawing.Point(419, 370);
+            this.lblExpectedVal.Location = new System.Drawing.Point(559, 455);
+            this.lblExpectedVal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblExpectedVal.Name = "lblExpectedVal";
-            this.lblExpectedVal.Size = new System.Drawing.Size(16, 13);
+            this.lblExpectedVal.Size = new System.Drawing.Size(20, 17);
             this.lblExpectedVal.TabIndex = 20;
             this.lblExpectedVal.Text = "...";
             // 
             // MnistMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(680, 405);
+            this.ClientSize = new System.Drawing.Size(907, 498);
             this.Controls.Add(this.lblExpectedVal);
             this.Controls.Add(this.lblExpected);
             this.Controls.Add(this.BtnNext);
@@ -244,7 +242,7 @@
             this.Controls.Add(this.BtnTrainNN);
             this.Controls.Add(this.BtnTestNeuralNetwork);
             this.Controls.Add(this.MNISTImage);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MnistMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mnist Recognition";
