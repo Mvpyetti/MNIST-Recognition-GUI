@@ -23,17 +23,13 @@ namespace Mnist_Recognition_GUI
         int intNeuronCnt;
         int totalImages;
         double dblEta;
-        double dblMiniBatchCnt;
+        int intMiniBatchCnt;
         double dblEpochCount;
         string actFunc;
         MnistWrapper.MnistWrapperClass PrimeNeuralNetwork;
 
-        FileStream ifsLabels =
-        new FileStream("t10k-labels.idx1-ubyte",
-        FileMode.Open); // test labels
-        FileStream ifsImages =
-         new FileStream("t10k-images.idx3-ubyte",
-         FileMode.Open);
+        FileStream ifsLabels = new FileStream("t10k-labels.idx1-ubyte", FileMode.Open); // test labels
+        FileStream ifsImages = new FileStream("t10k-images.idx3-ubyte", FileMode.Open);
 
         byte[] pixels = new byte[7840000];
         byte[] labels = new byte[10000];
@@ -90,7 +86,7 @@ namespace Mnist_Recognition_GUI
             //Obtain Hyper Parameters from GUI
             dblEta = double.Parse(txtEta.Text);
             intNeuronCnt = int.Parse(txtNeuronCnt.Text);
-            dblMiniBatchCnt = double.Parse(txtMiniBatch.Text);
+            intMiniBatchCnt = int.Parse(txtMiniBatch.Text);
             dblEpochCount = double.Parse(txtEpoch.Text);
             actFunc = txtActFunc.Text;
             
@@ -100,6 +96,7 @@ namespace Mnist_Recognition_GUI
             tempNeuralNetwork.SetEpochCount(dblEpochCount);
             tempNeuralNetwork.SetNeuronCount(intNeuronCnt);
             tempNeuralNetwork.SetEta(dblEta);
+            tempNeuralNetwork.SetBatchSize(intMiniBatchCnt);
 
             //Obtain the images and labels from the given file names
             Task<bool> gettingImagesTask = new Task<bool>(() => { return tempNeuralNetwork.ReadImages(strTrainingInFile); });
